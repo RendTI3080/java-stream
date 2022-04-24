@@ -18,7 +18,7 @@ public class TransformationTest {
     // flatmap merubah suatu data ke stream yang lain
     @Test
     void testFlatMapOperations() {
-        List.of("Rendy", "Eka", "Febriyanto").stream()
+        Stream.of("Rendy", "Eka", "Febriyanto")
                 .map(String::toUpperCase)
                 .flatMap(value -> Stream.of(value, value.length()))
                 .forEach(System.out::println);
