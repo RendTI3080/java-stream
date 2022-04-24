@@ -5,6 +5,8 @@ import java.util.stream.Stream;
 
 public class TransformationTest {
 
+
+    // map merubah suatu data ke data yang lain
     @Test
     void testMapOperations() {
         List.of("Rendy", "Eka", "Febriyanto").stream()
@@ -13,6 +15,7 @@ public class TransformationTest {
                 .forEach(System.out::println);
     }
 
+    // flatmap merubah suatu data ke stream yang lain
     @Test
     void testFlatMapOperations() {
         List.of("Rendy", "Eka", "Febriyanto").stream()
