@@ -11,6 +11,8 @@ public class RetrieveTest {
 
         /**
          *
+         * RETRIEVE yaitu pengetesan untuk mengambil sebagian data
+         *
          * LIMIT = Mengambil data sejumlah n
          * SKIP = Melawati data sejumlah n
          * TAKEWHILE = Mengambil data selama kondisi true
@@ -21,5 +23,15 @@ public class RetrieveTest {
         // stream.skip(2).forEach(System.out::println);
         // stream.takeWhile(value -> value.length() > 2).forEach(System.out::println);
         // stream.dropWhile(value -> value.length() > 2).forEach(System.out::println);
+    }
+
+    @Test
+    void testRetrieveSingleOperation(){
+        Stream<String> stream = Stream.of("Rendy","EKa","Febriyanto");
+
+        // mengambil satu element random
+        stream.findAny().ifPresent(System.out::println);
+        // mengambil elemet pertama
+        // stream.findFirst().ifPresent(System.out::println);
     }
 }
